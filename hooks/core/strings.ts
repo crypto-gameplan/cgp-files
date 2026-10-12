@@ -1,0 +1,26 @@
+// Every piece of UI text, in English.
+
+export const T = {
+  command: 'cgp-files',
+  commandHelp: 'Show the CGP file tree; args: [path] (no path = the working folder)',
+  paneTitle: (name: string) => `Files: ${name}`,
+  needsFullscreen: 'cgp-files shows in the sidebar, which needs the fullscreen layout. Run /tui fullscreen, then /cgp-files.',
+  needsWidth: (min: number) => `cgp-files shows in the sidebar, which needs a terminal at least ${min} columns wide. Widen it, then run /cgp-files.`,
+  opened: (path: string, follows: boolean) => `File tree on ${path}${follows ? ' (follows the working folder)' : ''}.`,
+  empty: 'empty',
+  noRepo: 'no git repo · git status starts after git init',
+  clean: ' clean',
+  search: 'search',
+  jump: 'jump',
+  selected: 'selected: ',
+  more: (n: number) => `  … ${n} more rows, collapse folders or use search`,
+  back: 'files',
+  copied: (path: string) => `Copied ${path}`,
+  copyFailed: 'Could not copy the path',
+  listFailed: (path: string, why: string) => `could not list ${path}: ${why}`,
+  openFailed: (path: string, app: string, why: string) => `could not open ${path} with ${app}${why ? `: ${why}` : ''}`,
+  readFailed: (why: string) => `could not read: ${why}`,
+  failed: (verb: string) => `${verb} failed`,
+  ran: (kind: string) => `ran ${kind}`,
+  interrupted: (kind: string) => `${kind} interrupted`,
+}

@@ -1,0 +1,57 @@
+{
+  "name": "cgp-files",
+  "version": "1.0.0",
+  "description": "An IDE-style file tree beside your Claude Code session: git status per file and folder, a search over the whole project, and rows that glow where Claude reads, writes and commits. By Crypto Gameplan.",
+  "author": {
+    "name": "Crypto Gameplan",
+    "url": "https://github.com/crypto-gameplan"
+  },
+  "homepage": "https://github.com/crypto-gameplan/cgp-files",
+  "repository": "https://github.com/crypto-gameplan/cgp-files",
+  "license": "MIT",
+  "keywords": ["file-tree", "git", "mod", "pane"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "activity": {
+      "type": "string",
+      "title": "Claude activity",
+      "description": "What glows in the tree while Claude works: files it reads (Read, or rg, grep, find, cat in Bash) in violet, writes in CGP gold, git actions in green.",
+      "default": "reads and writes",
+      "options": ["reads and writes", "writes", "reads", "none"]
+    },
+    "follow": {
+      "type": "string",
+      "title": "Follow Claude",
+      "description": "on: the tree scrolls to what Claude reads, writes or commits. off: the view stays where you put it; the glow still shows.",
+      "default": "on",
+      "options": ["on", "off"]
+    },
+    "start": {
+      "type": "string",
+      "title": "Open at start",
+      "description": "on: the pane opens when a session starts. off: it stays closed until you run /cgp-files.",
+      "default": "on",
+      "options": ["on", "off"]
+    },
+    "column": {
+      "type": "string",
+      "title": "Right column",
+      "description": "What the right column shows at start: date (last modified) or size (files in bytes, folders as disk usage worked out in the background). The Σ button toggles it.",
+      "default": "date",
+      "options": ["date", "size"]
+    },
+    "open": {
+      "type": "string",
+      "title": "Open with",
+      "description": "What a double-click or Enter does with a file. Empty: the default app. preview: show it in the pane. Anything else is a command run instead: {path} is the file, {dir} its folder, and without {path} the path goes last. Quotes keep a word whole; no shell runs it.",
+      "default": ""
+    },
+    "glyphs": {
+      "type": "string",
+      "title": "Glyphs",
+      "description": "auto: Nerd Font icons when one is installed, plain Unicode in the desktop app. nerd or plain forces one.",
+      "default": "auto",
+      "options": ["auto", "nerd", "plain"]
+    }
+  }
+}
