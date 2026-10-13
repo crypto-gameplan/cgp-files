@@ -17,3 +17,8 @@ Conventions:
 - Paths are absolute and use forward slashes everywhere, on Windows too: run anything from the engine or git through `posix()` first.
 - A `Client` module path is a string literal relative to the file that draws it (`./rows.tsx` from `ui/pane.tsx`).
 - Colours come from `ui/palette.ts`, which matches cgp-effort and cgp-crew: CGP gold `#ffab19` for writes and folders, violet for reads, green for commits.
+
+Guide:
+- `docs/GUIDE.md` is the reference the `cgp-files-help` skill answers from. Change it with every change a user can see.
+- On a version bump, run `node tools/sync-version.mjs docs/GUIDE.md .claude-plugin/plugin.json` so its version line follows.
+- The PDF is built from `../cgp-files-docs/guide/guide.html` with the cgp-guide skill and attached to the GitHub release as `CGP-Files-Guide.pdf`.

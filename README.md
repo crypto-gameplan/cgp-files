@@ -2,6 +2,8 @@
 
 A Claude Code plugin by [Crypto Gameplan](https://github.com/crypto-gameplan). It puts an IDE-style file tree beside your session. The tree shows the git status of every file and folder. You can search the whole project from it. While Claude works, the rows it reads, writes or commits glow for a moment.
 
+How everything works, in detail: [docs/GUIDE.md](docs/GUIDE.md). The same as a PDF is attached to every release ([latest](https://github.com/crypto-gameplan/cgp-files/releases/latest/download/CGP-Files-Guide.pdf)). In Claude Code you can also just ask, for example "what does M:2 on a folder mean?": the plugin brings a skill that answers from the guide.
+
 ## Install
 
 CGP Files is listed in the Crypto Gameplan marketplace ([crypto-gameplan/cgp-marketplace](https://github.com/crypto-gameplan/cgp-marketplace)). In Claude Code, run:
